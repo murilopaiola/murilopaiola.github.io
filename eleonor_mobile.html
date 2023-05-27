@@ -79,8 +79,8 @@
     <script>
         function moveButton() {
             const btnNo = document.getElementById('noBtn');
-            const xPos = Math.floor(Math.random() * window.innerWidth);
-            const yPos = Math.floor(Math.random() * window.innerHeight);
+            const xPos = Math.floor(Math.random() * window.innerWidth - 110);
+            const yPos = Math.floor(Math.random() * window.innerHeight - 110);
             btnNo.style.position = 'absolute';
             btnNo.style.left = xPos + 'px';
             btnNo.style.top = yPos + 'px';
