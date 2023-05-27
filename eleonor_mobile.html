@@ -15,10 +15,17 @@
             overflow: hidden;
             margin: 0;
             padding: 0;
- 	    max-height: 100vh;
-	    max-width: 100vw;
-	    background: url('https://w.forfun.com/fetch/bd/bd29ee345857af59c38a3601c582da66.jpeg') no-repeat center center; 
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('https://w.forfun.com/fetch/bd/bd29ee345857af59c38a3601c582da66.jpeg') no-repeat center center; 
             background-size: cover;
+            z-index: -1;
         }
         h1 {
             color: #000;
@@ -33,7 +40,7 @@
             word-spacing: 2px;
         }
         button {
-            width: 120px;
+	    width: 200px;
             margin: 5px;
             padding: 10px 20px;
             font-size: 1em;
@@ -47,11 +54,10 @@
             justify-content: center;
             gap: 20px;
         }
-	.text-container {
+		.text-container {
             display: flex;
             justify-content: center;
             gap: 20px;
-	    margin: 0px 50px;
         }
         #yesBtn {
             background: #007aff;
@@ -87,7 +93,7 @@
     
 	<div class="button-container">
 		<button id="yesBtn" onclick="openLink()">SIM</button>
-		<button id="noBtn" onclick="moveButton()">NAO</button>
+		<button id="noBtn" onmouseover="moveButton()">NAO</button>
 	</div>
 </body>
 </html>
